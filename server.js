@@ -28,19 +28,6 @@ mongoose.connect(process.env.MONGO_URI_USERS, { useNewUrlParser: true, useUnifie
     .then(() => console.log('User Database connected'))
     .catch(err => console.log(err));
 
-// // MongoDB connection setup for user database
-// const userDB = mongoose.createConnection(process.env.MONGO_URI_USERS, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   socketTimeoutMS: 45000,
-//   connectTimeoutMS: 30000,
-//   serverSelectionTimeoutMS: 10000, 
-// });
-// userDB.on('error', console.error.bind(console, 'MongoDB connection error for user database:'));
-// userDB.once('open', () => {
-//   console.log('Connected to User database');
-// });
-
 // MongoDB connection setup for restaurant database
 const restaurantDB = mongoose.createConnection(process.env.MONGO_URI_RESTAURANTS, {
   useNewUrlParser: true,
@@ -48,7 +35,7 @@ const restaurantDB = mongoose.createConnection(process.env.MONGO_URI_RESTAURANTS
 });
 restaurantDB.on('error', console.error.bind(console, 'MongoDB connection error for restaurant database:'));
 restaurantDB.once('open', () => {
-  console.log('Connected to Restaurant database');
+  console.log('Restaurant Database connected');
 });
 
 // Routes setup

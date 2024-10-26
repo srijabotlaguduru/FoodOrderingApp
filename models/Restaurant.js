@@ -11,7 +11,7 @@ const restaurantSchema = new mongoose.Schema({
   },
   uniqueId: { type: String, required: true, unique: true },
   mainTag: { type: String, required: true },
-  tags: { type: [String], required: true },
+  tags: { type: [String], required: true},
 });
 
 // Create Restaurant model
